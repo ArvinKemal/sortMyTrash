@@ -1,0 +1,55 @@
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form, .signin-form {
+  border: 1px solid black;
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px -1px 40px -3px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 1px -1px 40px -3px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 1px -1px 40px -3px rgba(0, 0, 0, 0.14);
+}
+
+.form-login, .form-daftar {
+  padding: 12px 30px 12px 30px;
+  width: 100%;
+}
+
+.form-control {
+  width: 100%;
+  height: 35px;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.button-login , .button-daftar {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 24px;
+  padding: 12px;
+  background-color: var(--color-primer);
+  cursor: pointer;
+}
+
+.desc-login, .desc-daftar {
+  margin: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.logo-sortmytrash {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}

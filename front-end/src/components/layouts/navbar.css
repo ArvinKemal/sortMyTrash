@@ -1,0 +1,64 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1519px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.logo-p {
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menuu-wrap {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #BDB76B;
+    margin-left: 20px;
+}
+
+.menuu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    margin-left: 1rem;
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    color: #BDB76B;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.akun {
+    width: 50px;
+    height: auto;
+    border-radius: 55%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button-logout {
+    border-radius: 24px;
+    padding: 6px 12px;
+    margin: 5px 0 5px 0;
+    background-color: var(--color-primer);
+    cursor: pointer;
+}

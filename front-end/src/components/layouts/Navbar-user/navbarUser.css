@@ -1,0 +1,22 @@
+.navbar-user {
+    background-color: var(--color-primer);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    height: 70px;
+}
+
+.user-pagination {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.icon-back-nav-user {
+    width: 24px;
+}

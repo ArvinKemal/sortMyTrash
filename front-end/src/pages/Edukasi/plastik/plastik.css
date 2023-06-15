@@ -1,0 +1,85 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set background color and font for body */
+  body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set header style */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bdb76b;
+    color: #fff;
+    height: 80px;
+    padding: 0 20px;
+  }
+  
+  header img {
+    margin-left: 10px;
+  }
+  
+  /* Set main section style */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Set section style */
+  section {
+    margin: 40px 0;
+  }
+  
+  section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  section p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  section ul,
+  section ol {
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  section li {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Set navigation style */
+  .nav {
+    background-color: #bdb76b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    display: flex;
+    background-color: #bdb76b;
+    text-decoration: none;
+    padding: 5%;
+  }
+  .nav-link:hover {
+    color: #ffffff;
+}
+  .nav-link:hover {
+      font-style: italic;
+  }
+  

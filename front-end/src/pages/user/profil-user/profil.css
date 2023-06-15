@@ -1,0 +1,57 @@
+/* Set background color for the body element */
+body {
+  background-color: #f2f2f2;
+}
+
+/* Center the image */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style the heading */
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  
+}
+
+/* Style the paragraph */
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+button {
+  margin: 10px ;
+  width: 150px;
+  
+}
+.btn-outline-secondary {
+  background-color: #bdb76b;
+  color: #030303;
+  border-radius: 0px;
+}
+
+
+button:hover {
+  background-color: #656363;
+  
+}
+
+.profil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 90px;
+}

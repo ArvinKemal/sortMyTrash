@@ -1,0 +1,11 @@
+API LIST:
+Masyarakat
+-Daftar (/)
+-Login (/)
+-Edukasi (/edukasi-sampah)
+-Tambah edukasi (/edukasi-sampah:id)
+-Riwayat(/riwayat)
+-Pengaduan(/pengaduan)
+
+Petugas
+-Laporan

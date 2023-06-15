@@ -1,0 +1,87 @@
+.containerBeranda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 1519px;
+  overflow: hidden;
+}
+
+.fitur-sortir-container {
+  background-image: url('../../assets/img/bgSort.jpg');
+}
+
+.fitur-edukasi-container {
+  background-image: url('../../assets/img/bgEdukasi.jpg');
+  justify-content: flex-end;
+}
+
+.fitur-pengaduan-container {
+  background-image: url('../../assets/img/bgPengaduan.jpg');
+}
+
+.fitur-lokasi-container {
+  background-image: url('../../assets/img/bgLokasi.jpg');
+  justify-content: flex-end;
+}
+
+.fitur-sortir-container, 
+.fitur-edukasi-container, 
+.fitur-pengaduan-container, 
+.fitur-lokasi-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  height: 500px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fitur-sortir-container .card-title, 
+.fitur-edukasi-container .card-title, 
+.fitur-pengaduan-container .card-title, 
+.fitur-lokasi-container .card-title {
+  color: black;
+}
+
+.fitur-sortir-container .card, 
+.fitur-edukasi-container .card, 
+.fitur-pengaduan-container .card,
+.fitur-lokasi-container .card {
+  margin: 10px;
+  padding: 25px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 25px 13px rgba(12, 11, 11, 0.74);
+  -webkit-box-shadow: -1px 1px 25px 13px rgba(12, 11, 11, 0.74);
+  -moz-box-shadow: -1px 1px 25px 13px rgba(12, 11, 11, 0.74);
+  width: 400px;
+  position: relative;
+  background-color: azure;
+  overflow: hidden;
+}
+
+.fitur-sortir-container .card, 
+.fitur-pengaduan-container .card {
+  left: 100px;
+}
+
+.fitur-edukasi-container .card,
+.fitur-lokasi-container .card{
+  right: 100px;
+}
+
+.card-title-h1 {
+  text-align: center;
+}
+
+.vh {
+  height: 100vh;
+  width: 100vw;
+}
+
+.img {
+  width: 60px;
+  height: auto;
+}
