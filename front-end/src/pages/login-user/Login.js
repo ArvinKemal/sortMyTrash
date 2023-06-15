@@ -1,59 +1,95 @@
-import React, { useState } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from '../../assets/img/logo.png'
+import axios from 'axios'
 import './login.css'
+import { loginRoute } from '../../utils/APIRoutes'
 
 const Login = () => {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
-  const onLogin = (e) => {
-    e.preventDefault();
-    // signInWithEmailAndPassword(auth, email, password)
-    //   .then((userCredential) => {
-    //     // Signed in
-    //     const user = userCredential.user;
-    //     navigate("/")
-    //     console.log(user);
-    //   })
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     console.log(errorCode, errorMessage)
-    //     alert('Email atau Password yang anda masukan salah!')
-    //   });
+  const [values, setValues] = useState({
+    email: "",
+    password: ""
+  })
+
+  useEffect(() => {
+    if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
+      navigate("/");
+    }
+  }, []);
+
+  const handleChange = (event) => {
+    setValues({ ...values, [event.target.name]: event.target.value })
+  }
+
+  const validateForm = () => {
+    const { email, password } = values
+    console.log(email)
+    console.log(password)
+    if (email === "") {
+      alert("email dan password diperlukan!")
+      return false
+    }
+    if (password.length <= 5) {
+      alert("email dan password diperlukan!")
+      return false
+    }
+    return true
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (validateForm()) {
+      const { email, password } = values;
+      const { data } = await axios.post(loginRoute, {
+        email,
+        password
+      })
+      if (data.status === false) {
+        alert(data.msg)
+      }
+      if (data.status === true) {
+        localStorage.setItem(
+          process.env.REACT_APP_LOCALHOST_KEY,
+          JSON.stringify(data.user)
+        )
+        navigate('/')
+      }
+      console.log(data)
+    }
   }
 
   return (
     <div className='login-container'>
-
-      <form className="login-form">
+      <form className="login-form" action='' onSubmit={(event) => handleSubmit(event)}>
         <div>
           <img className='logo-sortmytrash' src={logo} alt={'SortMyTrash logo'} />
         </div>
         <div className="form-login">
-          <input
+          <input className="form-control"
+            name='email'
             type="email"
-            className="form-control"
             placeholder='Email'
-            onChange={(e) => { setEmail(e.target.value) }}
-            required />
-        </div>
-        <div class="form-login">
-          <input
-            type="password"
-            className="form-control"
-            placeholder='Kata Sandi'
-            onChange={(e) => { setPassword(e.target.value) }}
+            onChange={(e) => handleChange(e)}
             required />
         </div>
         <div className="form-login">
-          <button className='button-login' onClick={onLogin}
-
+          <input className="form-control"
+            name='password'
+            type="password"
+            placeholder='Kata Sandi'
+            onChange={(e) => handleChange(e)}
+            required />
+        </div>
+        <div className="form-login">
+          <button
+            className='button-login'
+            type='submit'
           >Daftar</button>
         </div>
-        <p class="desc-daftar">Belum punya akun? <Link to='/daftar'>Daftar Disini</Link> </p>
+        <p className="desc-daftar">Belum punya akun? <Link to='/daftar'>Daftar Disini</Link> </p>
       </form>
     </div>
   )

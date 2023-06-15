@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import Navbar from '../../components/layouts/Navbar'
 import './beranda.css'
@@ -11,8 +12,9 @@ function Beranda() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
-			navigate("/daftar");
+        const user = localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
+        if (!user) {
+			navigate("/login");
 		}
     }, [])
 

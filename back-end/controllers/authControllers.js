@@ -5,6 +5,8 @@ module.exports.login = async (req, res, next) => {
         const {email, password} = req.body;
         const user = await Masyarakat.findOne({ email });
         if (!user) return res.json({msg: "Password atau Username tidak ditemukan!", status: false});
+        const checkPassword = (user.password === password)
+        if (!checkPassword) res.json({msg: "Password salah!", status: false})
         return res.json({status: true, user})
     } catch (ex) {
         next(ex)
