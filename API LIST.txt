@@ -1,7 +1,7 @@
 API LIST:
 Masyarakat
--Daftar (/)
--Login (/)
+-Daftar (/register)
+-Login (/login)
 -Edukasi (/edukasi-sampah)
 -Tambah edukasi (/edukasi-sampah:id)
 -Riwayat(/riwayat)

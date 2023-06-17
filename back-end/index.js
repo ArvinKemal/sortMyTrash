@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const port = process.env.PORT
 const authRoutes = require('./routers/auth')
+const edukasiRoutes = require('./routers/edukasi')
 
 app.use(cors())
 app.use(express.json())
@@ -23,8 +24,9 @@ mongoose
   });
 
 app.use("/api/auth", authRoutes)
+app.use("/api", edukasiRoutes)
 
-app.get('api/auth/register', function (req, res) {
+app.get('/register', function (req, res) {
   res.send('test')
 })
 

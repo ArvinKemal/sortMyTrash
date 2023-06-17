@@ -26,8 +26,6 @@ const Login = () => {
 
   const validateForm = () => {
     const { email, password } = values
-    console.log(email)
-    console.log(password)
     if (email === "") {
       alert("email dan password diperlukan!")
       return false

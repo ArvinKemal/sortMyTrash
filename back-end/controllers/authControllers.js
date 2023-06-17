@@ -1,4 +1,4 @@
-const Masyarakat = require('../models/masyarakatModel')
+const Masyarakat = require('../models/auth/masyarakat-model')
 
 module.exports.login = async (req, res, next) => {
     try {
@@ -6,14 +6,14 @@ module.exports.login = async (req, res, next) => {
         const user = await Masyarakat.findOne({ email });
         if (!user) return res.json({msg: "Password atau Username tidak ditemukan!", status: false});
         const checkPassword = (user.password === password)
-        if (!checkPassword) res.json({msg: "Password salah!", status: false})
+        if (!checkPassword) return res.json({msg: "Password salah!", status: false});
         return res.json({status: true, user})
     } catch (ex) {
         next(ex)
     }
 }
 
-module.exports. register = async (req, res, next) => {
+module.exports.register = async (req, res, next) => {
     try {
         const {namaLengkap, nomorTelepon, email, password} = req.body
         const emailCheck = await Masyarakat.findOne({ email });

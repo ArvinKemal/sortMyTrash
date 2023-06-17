@@ -1,70 +1,25 @@
-/* Set font family
-body {
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #bdb76b;
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
-
-
-main {
+.edukasi-container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  flex-basis: auto;
-
-  padding: 30px 30px;
 }
 
-
-article h2 {
-  margin-top: 0;
-}
-
-
-article img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-
-article p {
-  line-height: 1.5;
-}
-.nav {
+.edukasi-content {
+  background-color: var(--color-abu);
+  width: 100vw;
   display: flex;
-  justify-content: flex-end;
-  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2px 0 5px 0;
 }
 
-.navLink {
-  background-color: #bdb76b;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-right: 20px;
-}
-.navLink:hover {
-  color: #ffffff;
+.edukasi-content h2 {
+  padding: 38px;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-.navLink:hover {
-  background-color: #68653b;
-  cursor: pointer;
+.edukasi-content-button {
+  position: absolute;
+  right: 80px;
 }
-
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-} */

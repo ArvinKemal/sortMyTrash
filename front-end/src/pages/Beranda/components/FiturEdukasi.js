@@ -17,7 +17,7 @@ const FiturEdukasi = () => {
                 </div>
                 <Gap height="20" />
                 <div className='card-description'>
-                <button className="button" onClick={() => Navigate('/sortir')}>Sortir</button>
+                <button className="button" onClick={() => Navigate('/edukasi-sampah')}>Edukasi</button>
                 </div>
             </div>
         </div>

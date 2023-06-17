@@ -13,15 +13,15 @@ const DaftarAkunUSer = () => {
 		nomorTelepon: "",
 		password: ""
 	})
-	
+
 	useEffect(() => {
 		if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
 			navigate("/");
 		}
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const handleChange = (event) => {
+		console.log(event.target)
 		setValues({ ...values, [event.target.name]: event.target.value })
 	}
 
@@ -31,7 +31,7 @@ const DaftarAkunUSer = () => {
 			alert("email dan password diperlukan!")
 			return false
 		}
-		if (nomorTelepon.length <= 8 || nomorTelepon.length >=14) {
+		if (nomorTelepon.length <= 8 || nomorTelepon.length >= 14) {
 			alert("Nomor Telepon tidak valid!")
 			return false
 		}
