@@ -15,6 +15,7 @@ import { HasilSortingAluminium,
   HasilSortingKardus, 
   HasilSortingKertas, 
   HasilSortingPlastik } from '../../pages/Sorting/HasilSorting'
+import EdukasiDetail from '../../pages/Edukasi/EdukasiDetail/EdukasiDetail'
 
 const Routingan = () => {
   return (
@@ -34,10 +35,12 @@ const Routingan = () => {
             <Route path='/sortir/kardus' element={<HasilSortingKardus />} />
             <Route path='/sortir/kertas' element={<HasilSortingKertas />} />
 
+            <Route path='/edukasi-sampah' element={<Edukasi />}/>
+            <Route path='/edukasi-sampah/detail-edukasi/:id' element={<EdukasiDetail />}/>
+
             <Route path='/pengaduan' element= {<PengaduanUser />} />
             <Route path='/saran' element={<SaranUser />} />
             <Route path='/riwayat' element= {<RiwayatUser />}/>
-            <Route path='/edukasi-sampah' element={<Edukasi />}/>
             <Route path='/lokasi' element={<LokasiPembuanganUser />}/>
         </Routes>
     </Router>

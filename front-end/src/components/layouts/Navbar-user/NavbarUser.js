@@ -13,7 +13,6 @@ const NavbarUser = (props) => {
           Navigate(pindah)
         }
       }, [pindah, Navigate])
-    
   return (
     <nav className='navbar-user'>
         <div className='user-pagination'>

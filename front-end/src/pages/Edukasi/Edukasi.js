@@ -4,10 +4,12 @@ import { getEdukasiRoute } from '../../utils/APIRoutes'
 import './edukasi.css'
 import NavbarUser from '../../components/layouts/Navbar-user/NavbarUser'
 import { useNavigate } from 'react-router-dom'
+import EdukasiDetail from './EdukasiDetail/EdukasiDetail'
 
 const Edukasi = () => {
-    const Navigate = useNavigate()
+    const navigate = useNavigate()
     const [values, setValues] = useState([]) // state awal harus array jika data lebih dari 1
+
     const fetchData = async () => {
         try {
             const response = await axios.get(getEdukasiRoute)
@@ -29,8 +31,6 @@ const Edukasi = () => {
                 deskripsi: data.deskripsi
             }));
             setValues(updatedValues) // Menggunakan array baru yang berisi semua data
-
-            console.log('values:', values)
             // }
         } catch (error) {
             console.error('gagal mendapatkan data', error)
@@ -40,6 +40,11 @@ const Edukasi = () => {
     useEffect(() => {
         fetchData()
     }, [])
+
+    const handleClick = (item) => {
+        navigate(`/edukasi-sampah/detail-edukasi/${item._id}`); // Pass the item ID as a route parameter)
+    }
+
 
     if (values.length === 0) { // Menampilkan pesan loading jika data belum diterima
         return <p>Loading...</p>;
@@ -56,13 +61,18 @@ const Edukasi = () => {
                             <h2>{item.nama}</h2>
                         </div>
                         <div className='edukasi-content-button'>
-                            <button className='button' style={{ width: 180 + "px" }}
-                                // onClick={() => Navigate('/pengaduan')}
+                            <button className='button'
+                                name={item.nama}
+                                style={{ width: 180 + "px" }}
+                                onClick={() => {
+                                    handleClick(item)
+                                }}
                             >PILIH</button>
                         </div>
                     </div>
                 ))}
             </div>
+
         </>
     )
 }

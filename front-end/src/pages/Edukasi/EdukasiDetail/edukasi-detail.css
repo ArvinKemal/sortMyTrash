@@ -1,0 +1,41 @@
+.detail-edukasi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.detail-edukasi-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-edukasi-content-upper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.detail-edukasi-content-upper h3 {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.detail-edukasi-content-upper-add-edukasi {
+    position: absolute;
+    right: 100px;
+}
+
+.detail-edukasi-content-lower {
+    margin-bottom: 50px;
+}
+
+.detail-edukasi-content-lower p {
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 18px;
+    text-align: justify;
+}
