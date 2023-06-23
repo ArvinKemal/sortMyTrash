@@ -1,10 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { getEdukasiRoute } from '../../utils/APIRoutes'
+import { getAllEdukasiRoute } from '../../utils/APIRoutes'
 import './edukasi.css'
 import NavbarUser from '../../components/layouts/Navbar-user/NavbarUser'
 import { useNavigate } from 'react-router-dom'
-import EdukasiDetail from './EdukasiDetail/EdukasiDetail'
 
 const Edukasi = () => {
     const navigate = useNavigate()
@@ -12,7 +11,7 @@ const Edukasi = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(getEdukasiRoute)
+            const response = await axios.get(getAllEdukasiRoute)
             const datas = response.data
 
             // buatan sendiri
