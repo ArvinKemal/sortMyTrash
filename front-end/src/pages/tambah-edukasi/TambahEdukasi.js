@@ -1,11 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { getAllTambahEdukasiRoute } from '../../utils/APIRoutes'
+import { deleteTambahEdukasiRoute, getAllTambahEdukasiRoute } from '../../utils/APIRoutes'
 import './tambah-edukasi.css'
 import trash from './assets/trash.png'
 import pen from './assets/pen.png'
+import { useNavigate } from 'react-router-dom'
 
 const TambahEdukasi = (props) => {
+  const navigate = useNavigate()
   const [values, setValues] = useState([])
 
   const fetchData = async () => {
@@ -17,6 +19,17 @@ const TambahEdukasi = (props) => {
     } catch (error) {
       console.error('gagal mendapatkan data', error)
     }
+  }
+
+  const handleEdit = (id) => {
+    navigate(`/edukasi-sampah/edit-edukasi/${id}`)
+  }
+
+  const handleDelete = async (id) => {
+    const response = await axios.delete(`${deleteTambahEdukasiRoute}/${id}`)
+    if (!response) alert('Data Gagal dihapus!')
+    alert('Data berhasil Dihapus!')
+    fetchData()
   }
 
   useEffect(() => {
@@ -31,17 +44,24 @@ const TambahEdukasi = (props) => {
   return (
     <div>
       {values.map(item => (
-        <div className='tambah-edukasi-content' key={item.id}>
+        <div className='tambah-edukasi-content' key={item._id}>
           <div className='tambah-edukasi-content-label'>
             <div className='tambah-edukasi-content-label-left'>
               <h2 className='tambah-edukasi-content-label-name'>{item.namaLengkap}</h2>
             </div>
             <div className='tambah-edukasi-content-label-right'>
-              <div className='tambah-edukasi-content-label-right-item'>
-                <img src={pen} />
+              <div
+                className='tambah-edukasi-content-label-right-item'
+                onClick={() => {
+                  handleEdit(item._id)
+                }}>
+                <img src={pen} alt='edit' />
               </div>
-              <div className='tambah-edukasi-content-label-right-item'>
-                <img src={trash} />
+              <div className='tambah-edukasi-content-label-right-item'
+                onClick={() => {
+                  handleDelete(item._id)
+                }}>
+                <img src={trash} alt='delete' />
               </div>
             </div>
           </div>

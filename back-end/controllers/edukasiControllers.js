@@ -4,7 +4,7 @@ module.exports.getAll = async (req, res, next) => {
     try {
         const data = await Edukasi.find()
         if (!data) return res.json({ msg: "data tidak ada!", status: false })
-        return res.status(200).json(data)
+        return res.status(200)
     } catch (ex) {
         next(ex)
     }
