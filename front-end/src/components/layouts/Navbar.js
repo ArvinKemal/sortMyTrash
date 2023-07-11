@@ -29,7 +29,7 @@ const Navbar = () => {
                             EDUKASI
                         </div>
                     </a>
-                    <a href="/pengaduan">
+                    <a href="/pengaduan-sampah">
                         <div className="menu-item">
                             PENGADUAN
                         </div>

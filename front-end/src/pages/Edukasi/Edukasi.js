@@ -13,7 +13,6 @@ const Edukasi = () => {
         try {
             const response = await axios.get(getAllEdukasiRoute)
             const datas = response.data
-
             // buatan sendiri
             // for (let i = 0; i < datas.length; i++) {
             //     const data = datas[i]
@@ -23,7 +22,6 @@ const Edukasi = () => {
             //     updateValue.deskripsi = data.deskripsi
             //     setValues(updateValue)
             // }
-
             const updatedValues = datas.map(data => ({ // Membuat objek baru untuk setiap data
                 _id: data._id,
                 nama: data.nama,

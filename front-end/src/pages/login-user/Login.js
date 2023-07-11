@@ -55,7 +55,7 @@ const Login = () => {
         )
         navigate('/')
       }
-      console.log(data)
+      console.log('status:', data.status)
     }
   }
 

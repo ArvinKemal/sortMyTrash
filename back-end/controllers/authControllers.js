@@ -7,7 +7,7 @@ module.exports.login = async (req, res, next) => {
         if (!user) return res.json({msg: "Password atau Username tidak ditemukan!", status: false});
         const checkPassword = (user.password === password)
         if (!checkPassword) return res.json({msg: "Password salah!", status: false});
-        return res.json({status: true})
+        return res.json({status: true, user})
     } catch (ex) {
         next(ex)
     }
@@ -24,7 +24,7 @@ module.exports.register = async (req, res, next) => {
             nomorTelepon,
             password
         })
-        return res.json({ status: true})
+        return res.json({ status: true, user})
     } catch (ex) {
         next(ex)
     }

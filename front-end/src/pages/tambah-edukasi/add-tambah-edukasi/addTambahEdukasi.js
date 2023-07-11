@@ -80,7 +80,7 @@ const AddTambahEdukasi = () => {
   return (
     <div className='add-tambah-edukasi-container'>
       <h1>Form Deskripsi</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>  
         <div className='add-tambah-edukasi-container-form'>
           <label htmlFor="add-tambah-edukasi-container-form">Deskripsi Edukasi:</label>
           <textarea

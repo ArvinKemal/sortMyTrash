@@ -4,8 +4,7 @@ import { Beranda,
   SortingSampah, 
   LoginUser, 
   LokasiPembuanganUser, 
-  PengaduanUser, RiwayatUser, 
-  SaranUser, 
+  PengaduanSampahUser, RiwayatUser,
   Edukasi, 
   ProfilUser } from '../../pages'
 import DaftarAkunUSer from '../../pages/daftar-akun-user/DaftarAkunUser'
@@ -44,8 +43,8 @@ const Routingan = () => {
             <Route path='/edukasi-sampah/tambah-edukasi/:id' element={<AddTambahEdukasi />} />
             <Route path='/edukasi-sampah/edit-edukasi/:id' element={<EditTambahEdukasi />} />
 
-            <Route path='/pengaduan' element= {<PengaduanUser />} />
-            <Route path='/saran' element={<SaranUser />} />
+            <Route path='/pengaduan-sampah' element= {<PengaduanSampahUser />} />
+
             <Route path='/riwayat' element= {<RiwayatUser />}/>
             <Route path='/lokasi' element={<LokasiPembuanganUser />}/>
         </Routes>

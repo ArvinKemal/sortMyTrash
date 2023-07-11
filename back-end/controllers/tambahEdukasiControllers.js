@@ -9,7 +9,7 @@ module.exports.getAllTambahEdukasi = async (req, res, next) => {
 
         if (!data) return res.json({ msg: "data tidak ada!", status: false })
 
-        return res.status(200)
+        return res.status(200).json(data)
     } catch (ex) {
         next(ex)
     }
@@ -21,7 +21,7 @@ module.exports.getTambahEdukasiById = async (req, res, next) => {
         const data = await tambahEdukasi.findById(id)
         if (!data) return res.json({ msg: "data tidak ada!", status: false })
 
-        return res.status(200)
+        return res.status(200).json(data)
     } catch (ex) {
         next(ex)
     }
@@ -44,7 +44,7 @@ module.exports.addTambahEdukasi = async (req, res, next) => {
             deskripsi
         })
 
-        return res.json({status: true})
+        return res.json({status: true, data})
     } catch (ex) {
         next(ex)
     }
@@ -61,7 +61,7 @@ module.exports.updateTambahEdukasi = async (req, res, next) => {
             return res.json({ msg: 'Data tidak ditemukan', status: false });
         }
 
-        return res.status(200).json({ status: true});
+        return res.status(200).json({ status: true, result});
     } catch (ex) {
         next(ex);
     }
@@ -73,7 +73,7 @@ module.exports.deleteTambahEdukasi = async (req, res, next) => {
         const result = await tambahEdukasi.deleteOne({ _id: id })
         if (!result) return res.json({ msg: "data tidak ada!", status: false })
 
-        return res.status(200).json({ status: true});
+        return res.status(200).json({ status: true, result});
     } catch (ex) {
         next(ex)
     }
