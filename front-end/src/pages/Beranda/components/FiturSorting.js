@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Gap } from '../../../components'
+import { Gap } from '../../../components'
 import sortir from '../../../assets/img/sortir.svg'
 import { useNavigate } from 'react-router-dom'
 

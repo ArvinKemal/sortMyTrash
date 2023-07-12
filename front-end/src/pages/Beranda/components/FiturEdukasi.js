@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Button, Gap } from '../../../components'
+import { Gap } from '../../../components'
 import edukasi from '../../../assets/img/edukasi.svg'
 import { useNavigate } from 'react-router-dom'
 

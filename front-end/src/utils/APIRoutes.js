@@ -12,3 +12,5 @@ export const getTambahEdukasiByIdRoute = `${host}/api/edukasi/get-tambah-edukasi
 export const addTambahEdukasiRoute = `${host}/api/edukasi/tambah-edukasi`
 export const updateTambahEdukasiRoute = `${host}/api/edukasi/edit-tambah-edukasi`
 export const deleteTambahEdukasiRoute = `${host}/api/edukasi/hapus-tambah-edukasi`
+
+export const addPengaduanRoute = `${host}/api/pengaduan-sampah/tambah-pengaduan`

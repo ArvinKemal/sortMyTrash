@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Gap } from '../../../components'
+import { Gap } from '../../../components'
 import lokasi from '../../../assets/img/lokasi.svg'
 import { useNavigate } from 'react-router-dom'
 
