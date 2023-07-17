@@ -7,28 +7,46 @@ import FiturSorting from './components/FiturSorting'
 import FiturEdukasi from './components/FiturEdukasi'
 import FiturPengaduan from './components/FiturPengaduan'
 import FiturLokasi from './components/FiturLokasi'
+import FiturLaporan from './components/FiturLaporan'
 
 function Beranda() {
     const navigate = useNavigate()
 
+    const user = localStorage.getItem('USER')
+    const petugas = localStorage.getItem('PETUGAS')
+
     useEffect(() => {
-        const user = localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
-        if (!user) {
-			navigate("/login");
-		}
+        if (!user && !petugas) {
+            navigate("/login");
+        }
     }, [])
 
-    return (
-        <>
-            <Navbar />
-            <div className="containerBeranda">
-                <FiturSorting />
-                <FiturEdukasi />
-                <FiturPengaduan />
-                <FiturLokasi />
-            </div>
-        </>
-    )
+    if (user) {
+        return (
+            <>
+                <Navbar />
+                <div className="containerBeranda">
+                    <FiturSorting />
+                    <FiturEdukasi />
+                    <FiturPengaduan />
+                    <FiturLokasi />
+                </div>
+            </>
+        )
+    }
+
+    if (petugas) {
+        return (
+            <>
+                <Navbar />
+                <div className="containerBeranda">
+                    <FiturSorting />
+                    <FiturEdukasi />
+                    <FiturLaporan />
+                </div>
+            </>
+        )
+    }
 }
 
 export default Beranda;

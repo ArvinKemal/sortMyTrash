@@ -6,8 +6,10 @@ import { Beranda,
   LokasiPembuanganUser, 
   PengaduanSampahUser, RiwayatUser,
   Edukasi, 
-  ProfilUser } from '../../pages'
-import DaftarAkunUSer from '../../pages/daftar-akun-user/DaftarAkunUser'
+  ProfilUser,
+  LoginPetugas,
+DaftarAkunPetugas } from '../../pages'
+import DaftarAkunUSer from '../../pages/auth/user/daftar-akun-user/DaftarAkunUser'
 import { HasilSortingAluminium, 
   HasilSortingBesi, 
   HasilSortingElektronik, 
@@ -25,6 +27,10 @@ const Routingan = () => {
         <Routes>
             <Route path='/login' element={<LoginUser />} />
             <Route path='/daftar' element={<DaftarAkunUSer />}/>
+
+            <Route path='/login-petugas' element={<LoginPetugas />} />
+            <Route path='/daftar-petugas' element={<DaftarAkunPetugas />} />
+
             <Route path='/' element={ <Beranda />} />
 
             <Route path='/profil' element={<ProfilUser />}/>

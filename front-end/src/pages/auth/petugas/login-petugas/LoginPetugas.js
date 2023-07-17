@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import logo from '../../assets/img/logo.png'
+import logo from '../../../../assets/img/logo.png'
 import axios from 'axios'
 import './login.css'
-import { loginRoute } from '../../utils/APIRoutes'
+import { loginPetugasRoute } from '../../../../utils/APIRoutes'
 
-const Login = () => {
+const LoginPetugas = () => {
   const navigate = useNavigate()
 
   const [values, setValues] = useState({
@@ -41,7 +41,7 @@ const Login = () => {
     event.preventDefault();
     if (validateForm()) {
       const { email, password } = values;
-      const { data } = await axios.post(loginRoute, {
+      const { data } = await axios.post(loginPetugasRoute, {
         email,
         password
       })
@@ -50,7 +50,7 @@ const Login = () => {
       }
       if (data.status === true) {
         localStorage.setItem(
-          process.env.REACT_APP_LOCALHOST_KEY,
+          "PETUGAS",
           JSON.stringify(data.user)
         )
         navigate('/')
@@ -87,10 +87,10 @@ const Login = () => {
             type='submit'
           >Daftar</button>
         </div>
-        <p className="desc-daftar">Belum punya akun? <Link to='/daftar'>Daftar Disini</Link> </p>
+        <p className="desc-daftar">Belum punya akun? <Link to='/daftar-petugas'>Daftar sebagai Petugas </Link>/<Link to='/login'> Masuk sebagai User</Link></p>
       </form>
     </div>
   )
 }
 
-export default Login
+export default LoginPetugas

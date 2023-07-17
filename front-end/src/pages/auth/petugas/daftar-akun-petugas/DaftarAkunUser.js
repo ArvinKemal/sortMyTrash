@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import logo from '../../assets/img/logo.png'
+import logo from '../../../../assets/img/logo.png'
 import axios from 'axios'
-import { registerRoute } from '../../utils/APIRoutes'
+import { registerPetugasRoute } from '../../../../utils/APIRoutes'
 
-const DaftarAkunUSer = () => {
+const DaftarAkunPetugas = () => {
 	const navigate = useNavigate()
 
 	const [values, setValues] = useState({
@@ -15,7 +15,7 @@ const DaftarAkunUSer = () => {
 	})
 
 	useEffect(() => {
-		if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
+		if (localStorage.getItem("PETUGAS")) {
 			navigate("/");
 		}
 	}, []);
@@ -46,7 +46,7 @@ const DaftarAkunUSer = () => {
 		event.preventDefault();
 		if (validateForm()) {
 			const { namaLengkap, email, nomorTelepon, password } = values;
-			const { data } = await axios.post(registerRoute, {
+			const { data } = await axios.post(registerPetugasRoute, {
 				namaLengkap,
 				email,
 				nomorTelepon,
@@ -57,7 +57,7 @@ const DaftarAkunUSer = () => {
 			}
 			if (data.status === true) {
 				localStorage.setItem(
-					process.env.REACT_APP_LOCALHOST_KEY,
+					'PETUGAS',
 					JSON.stringify(data.user)
 				)
 				navigate('/')
@@ -114,11 +114,11 @@ const DaftarAkunUSer = () => {
 							type="submit"
 						>Daftar</button>
 					</div>
-					<p className="desc-daftar">Sudah punya akun? <Link to='/login'>Masuk Disini</Link> </p>
+					<p className="desc-daftar">Sudah punya akun? <Link to='/login-petugas'>Masuk Sebagai Petugas</Link> </p>
 				</form>
 			</div>
 		</>
 	)
 }
 
-export default DaftarAkunUSer	
+export default DaftarAkunPetugas	

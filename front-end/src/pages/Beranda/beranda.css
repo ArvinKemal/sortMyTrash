@@ -26,10 +26,15 @@
   justify-content: flex-end;
 }
 
+.fitur-laporan-container {
+  background-image: url('../../assets/img/laporan.jpg');
+}
+
 .fitur-sortir-container, 
 .fitur-edukasi-container, 
 .fitur-pengaduan-container, 
-.fitur-lokasi-container {
+.fitur-lokasi-container,
+.fitur-laporan-container {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,14 +47,16 @@
 .fitur-sortir-container .card-title, 
 .fitur-edukasi-container .card-title, 
 .fitur-pengaduan-container .card-title, 
-.fitur-lokasi-container .card-title {
+.fitur-lokasi-container .card-title,
+.fitur-laporan-container .card-title {
   color: black;
 }
 
 .fitur-sortir-container .card, 
 .fitur-edukasi-container .card, 
 .fitur-pengaduan-container .card,
-.fitur-lokasi-container .card {
+.fitur-lokasi-container .card,
+.fitur-laporan-container .card {
   margin: 10px;
   padding: 25px;
   border-radius: 30px;
@@ -63,7 +70,8 @@
 }
 
 .fitur-sortir-container .card, 
-.fitur-pengaduan-container .card {
+.fitur-pengaduan-container .card,
+.fitur-laporan-container .card {
   left: 100px;
 }
 
