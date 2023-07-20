@@ -5,7 +5,7 @@ const pengaduanSampahSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    namaLengkap_user : {
+    namaLengkap_user: {
         type: String,
         required: true
     },

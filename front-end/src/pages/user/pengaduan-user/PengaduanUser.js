@@ -14,7 +14,7 @@ const PengaduanSampahUser = () => {
 
     const fetchData = async () => {
         try {
-            const data = localStorage.getItem(undefined)
+            const data = localStorage.getItem('USER')
             const parsedData = JSON.parse(data)
             const id = parsedData._id
             const nama = parsedData.namaLengkap

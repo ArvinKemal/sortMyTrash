@@ -1,0 +1,60 @@
+.detail-laporan-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-laporan-content {
+    padding:  15px 50px;
+}
+
+.detail-laporan-content h4 {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.detail-laporan-content hr {
+    margin: 10px 0;
+    border: 0;
+    height: 2px;
+    background-color: var(--color-primer);
+}
+
+.detail-laporan-informasi, 
+.detail-laporan-lokasi, 
+.detail-laporan-permasalahan {
+    padding: 24px;
+}
+
+.detail-laporan-image {
+    width: 50%;
+}
+
+.detail-laporan-lokasi-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail {
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.px {
+    font-size: 16px;
+}
+
+.laporan-btn {
+    margin: 50px auto;
+}
+
+.laporan-buttonnn {
+    width: 180px;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    background-color: #50c048;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}

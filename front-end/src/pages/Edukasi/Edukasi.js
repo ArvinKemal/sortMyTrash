@@ -69,7 +69,6 @@ const Edukasi = () => {
                     </div>
                 ))}
             </div>
-
         </>
     )
 }

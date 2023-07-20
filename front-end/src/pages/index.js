@@ -10,6 +10,7 @@ import LoginUser from "./auth/user/login-user/Login"
 
 import LoginPetugas from "./auth/petugas/login-petugas/LoginPetugas"
 import DaftarAkunPetugas from "./auth/petugas/daftar-akun-petugas/DaftarAkunUser"
+import Laporan from "./petugas/Laporan/Laporan"
 
 export { Beranda, SortingSampah, LoginUser, LokasiPembuanganUser, PengaduanSampahUser, ProfilUser, RiwayatUser, UbahSandiUser, Edukasi, 
-    LoginPetugas, DaftarAkunPetugas}
+    LoginPetugas, DaftarAkunPetugas, Laporan}

@@ -8,7 +8,8 @@ import { Beranda,
   Edukasi, 
   ProfilUser,
   LoginPetugas,
-DaftarAkunPetugas } from '../../pages'
+DaftarAkunPetugas, 
+Laporan} from '../../pages'
 import DaftarAkunUSer from '../../pages/auth/user/daftar-akun-user/DaftarAkunUser'
 import { HasilSortingAluminium, 
   HasilSortingBesi, 
@@ -19,6 +20,7 @@ import { HasilSortingAluminium,
 import EdukasiDetail from '../../pages/Edukasi/EdukasiDetail/EdukasiDetail'
 import AddTambahEdukasi from '../../pages/tambah-edukasi/add-tambah-edukasi/addTambahEdukasi'
 import EditTambahEdukasi from '../../pages/tambah-edukasi/edit-tambah-edukasi/edit-tambah-edukasi'
+import LaporanDetail from '../../pages/petugas/LaporanDetail/LaporanDetail'
 
 
 const Routingan = () => {
@@ -53,6 +55,11 @@ const Routingan = () => {
 
             <Route path='/riwayat' element= {<RiwayatUser />}/>
             <Route path='/lokasi' element={<LokasiPembuanganUser />}/>
+
+
+
+            <Route path='/laporan' element={<Laporan />} />
+            <Route path='/laporan/detail-laporan/:id' element={<LaporanDetail />} />
         </Routes>
     </Router>
   )

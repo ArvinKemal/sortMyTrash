@@ -1,0 +1,56 @@
+.laporan-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.laporan-item-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.laporan-item {
+  width: 40%;
+  background-color: rgb(220, 220, 220);
+  padding: 16px;
+  margin: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.laporan-content-nama {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.laporan-content-permasalahan {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.green {
+  color: #198754;
+}
+
+.red {
+  color: #ff0505;
+}
+
+
+.laporan-content-stats {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.laporan-content-status-img {
+  width: 20px;
+  margin-right: 5px;
+  color: #ff0505;
+}
